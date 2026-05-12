@@ -6,351 +6,73 @@
   <title>DuplexIT | Enterprise Network & Cloud Infrastructure Solutions</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+    html{scroll-behavior:smooth}
+    body{background:#07122b;color:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+
+    .nav{position:sticky;top:0;z-index:100;background:rgba(7,18,43,.96);border-bottom:1px solid rgba(255,255,255,.08);padding:16px 6%}
+    .nav-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:24px;font-weight:800}
+    .nav-links{display:flex;gap:20px;font-size:15px;color:#cbd5e1}
+    .nav-links a:hover{color:#60a5fa}
+
+    .hero{padding:95px 6% 85px;background:radial-gradient(circle at top,rgba(37,99,235,.28),transparent 35%),linear-gradient(180deg,#07122b,#081936);text-align:center}
+    .hero-content{max-width:1050px;margin:auto}
+    .hero h1{font-size:clamp(42px,6vw,72px);line-height:1.1;margin-bottom:24px;font-weight:800}
+    .hero p{max-width:900px;margin:0 auto 36px;color:#d6e2f0;font-size:clamp(18px,2vw,22px);line-height:1.7}
+
+    .buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+    .btn{display:inline-block;padding:15px 28px;border-radius:12px;font-weight:700;transition:.25s ease}
+    .btn-primary{background:#2563eb;color:#fff}
+    .btn-primary:hover{background:#1d4ed8;transform:translateY(-2px)}
+    .btn-secondary{border:1px solid #60a5fa;color:#dbeafe;background:rgba(96,165,250,.08)}
+    .btn-secondary:hover{background:rgba(96,165,250,.16);transform:translateY(-2px)}
+
+    section{padding:72px 6%}
+    .section-dark{background:#081936}
+    .container{max-width:1200px;margin:auto}
+    .section-title{text-align:center;margin-bottom:34px}
+    .section-title h2{font-size:clamp(30px,4vw,42px);margin-bottom:10px}
+    .section-title p{max-width:760px;margin:auto;color:#cbd5e1;font-size:17px}
+
+    .about-box{max-width:1050px;margin:auto;background:#0d1b3d;border:1px solid rgba(255,255,255,.08);padding:34px;border-radius:18px;color:#dbeafe;font-size:18px;text-align:center}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .solution-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .card{background:#0d1b3d;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px;min-height:205px;transition:.25s ease}
+    .card:hover{transform:translateY(-4px);border-color:rgba(96,165,250,.45)}
+    .solution-card{background:linear-gradient(180deg,#0d1b3d,#0a1735);min-height:185px}
+    .icon{font-size:30px;margin-bottom:12px}
+    .card h3{color:#60a5fa;font-size:21px;margin-bottom:10px}
+    .card p{color:#d6e2f0;font-size:16px}
+    .outcome{display:inline-block;margin-top:14px;padding:7px 10px;border-radius:999px;background:rgba(34,197,94,.10);border:1px solid rgba(34,197,94,.25);color:#bbf7d0;font-size:13px;font-weight:700}
+
+    .two-column{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+    .info-box{background:#0d1b3d;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px}
+    .info-box h3{color:#60a5fa;font-size:24px;margin-bottom:18px}
+    .list{display:grid;gap:12px}
+    .list-item{background:rgba(96,165,250,.08);border:1px solid rgba(96,165,250,.16);padding:13px 15px;border-radius:12px;color:#dbeafe}
+
+    .cta{text-align:center;background:radial-gradient(circle at center,rgba(37,99,235,.25),transparent 45%),#07122b}
+    .cta h2{font-size:clamp(32px,5vw,48px);margin-bottom:16px}
+    .cta p{max-width:820px;margin:0 auto 28px;color:#cbd5e1;font-size:18px}
+
+    footer{background:#050b1d;color:#cbd5e1;padding:48px 6%;text-align:center}
+    footer h2{color:#fff;font-size:32px;margin-bottom:6px}
+    .footer-slogan{color:#60a5fa;font-weight:700;margin-bottom:14px}
+    .footer-line{margin:7px 0}
+
+    @media(max-width:900px){
+      .grid,.solution-grid,.two-column{grid-template-columns:1fr}
+      .card{min-height:auto}
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #07122b;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(7, 18, 43, 0.96);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 16px 6%;
-    }
-
-    .nav-inner {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      font-size: 15px;
-      color: #cbd5e1;
-    }
-
-    .nav-links a:hover {
-      color: #60a5fa;
-    }
-
-    .hero {
-      padding: 95px 6% 75px;
-      background:
-        radial-gradient(circle at top, rgba(37, 99, 235, 0.26), transparent 34%),
-        linear-gradient(180deg, #07122b 0%, #081936 100%);
-      text-align: center;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .hero-content {
-      max-width: 1050px;
-      margin: auto;
-    }
-
-    .hero h1 {
-      font-size: clamp(40px, 6vw, 68px);
-      line-height: 1.08;
-      margin-bottom: 22px;
-    }
-
-    .hero p {
-      max-width: 920px;
-      margin: 0 auto 26px;
-      color: #c7d2fe;
-      font-size: clamp(17px, 2vw, 22px);
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin: 26px auto 34px;
-    }
-
-    .badge {
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: rgba(96, 165, 250, 0.12);
-      color: #bfdbfe;
-      border: 1px solid rgba(96, 165, 250, 0.25);
-      font-size: 14px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 10px;
-      font-weight: 700;
-      transition: 0.25s ease;
-    }
-
-    .btn-primary {
-      background: #2563eb;
-      color: #ffffff;
-    }
-
-    .btn-primary:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      border: 1px solid #60a5fa;
-      color: #bfdbfe;
-      background: rgba(96, 165, 250, 0.08);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(96, 165, 250, 0.18);
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 72px 6%;
-    }
-
-    .section-dark {
-      background: #081936;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 34px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(30px, 4vw, 42px);
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      max-width: 760px;
-      margin: auto;
-      color: #cbd5e1;
-      font-size: 17px;
-    }
-
-    .about-box {
-      max-width: 1050px;
-      margin: auto;
-      background: #0d1b3d;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 34px;
-      border-radius: 18px;
-      color: #dbeafe;
-      font-size: 18px;
-      text-align: center;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .solution-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .card {
-      background: #0d1b3d;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-      padding: 24px;
-      transition: 0.25s ease;
-      min-height: 205px;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(96, 165, 250, 0.45);
-    }
-
-    .solution-card {
-      background: linear-gradient(180deg, #0d1b3d 0%, #0a1735 100%);
-      min-height: 185px;
-    }
-
-    .icon {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .card h3 {
-      color: #60a5fa;
-      font-size: 21px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #d6e2f0;
-      font-size: 16px;
-    }
-
-    .outcome {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.10);
-      border: 1px solid rgba(34, 197, 94, 0.25);
-      color: #bbf7d0;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .info-box {
-      background: #0d1b3d;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-      padding: 28px;
-    }
-
-    .info-box h3 {
-      color: #60a5fa;
-      font-size: 24px;
-      margin-bottom: 18px;
-    }
-
-    .list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .list-item {
-      background: rgba(96, 165, 250, 0.08);
-      border: 1px solid rgba(96, 165, 250, 0.16);
-      padding: 13px 15px;
-      border-radius: 12px;
-      color: #dbeafe;
-    }
-
-    .cta {
-      text-align: center;
-      background:
-        radial-gradient(circle at center, rgba(37, 99, 235, 0.25), transparent 45%),
-        #07122b;
-    }
-
-    .cta h2 {
-      font-size: clamp(32px, 5vw, 48px);
-      margin-bottom: 16px;
-    }
-
-    .cta p {
-      max-width: 820px;
-      margin: 0 auto 28px;
-      color: #cbd5e1;
-      font-size: 18px;
-    }
-
-    footer {
-      background: #050b1d;
-      color: #cbd5e1;
-      padding: 48px 6%;
-      text-align: center;
-    }
-
-    footer h2 {
-      color: #ffffff;
-      font-size: 32px;
-      margin-bottom: 6px;
-    }
-
-    .footer-slogan {
-      color: #60a5fa;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .footer-line {
-      margin: 7px 0;
-    }
-
-    @media (max-width: 900px) {
-      .grid,
-      .solution-grid,
-      .two-column {
-        grid-template-columns: 1fr;
-      }
-
-      .card {
-        min-height: auto;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .nav-inner {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .hero {
-        padding: 72px 6% 58px;
-      }
-
-      section {
-        padding: 58px 6%;
-      }
+    @media(max-width:760px){
+      .nav-inner{flex-direction:column;gap:12px}
+      .nav-links{flex-wrap:wrap;justify-content:center}
+      .hero{padding:72px 6% 58px}
+      section{padding:58px 6%}
     }
   </style>
 </head>
@@ -360,7 +82,6 @@
 <header class="nav">
   <div class="nav-inner">
     <div class="logo">DuplexIT</div>
-
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -373,35 +94,173 @@
 
 <section class="hero">
   <div class="hero-content">
-
     <h1>Enterprise Network & Cloud Infrastructure Solutions</h1>
-
     <p>
-      DuplexIT helps businesses design, secure, and optimize modern network infrastructure using Fortinet SD-WAN,
-      Cisco enterprise networking, Cisco ISE security solutions, AWS cloud networking, and secure hybrid connectivity.
+      DuplexIT helps businesses design, secure, and optimize modern enterprise infrastructure using
+      Fortinet SD-WAN, Cisco networking, Cisco ISE security solutions, and AWS cloud networking
+      including Direct Connect, Transit Gateway, VPC architecture, VPN connectivity, and hybrid cloud integration.
     </p>
 
-    <div class="badges">
-      <span class="badge">CCNP Certified</span>
-      <span class="badge">CCNA</span>
-      <span class="badge">Cisco ISE</span>
-      <span class="badge">Fortinet SD-WAN Architect</span>
-      <span class="badge">AWS Cloud Networking</span>
-      <span class="badge">Columbus, Ohio</span>
-    </div>
-
     <div class="buttons">
-      <a class="btn btn-primary" href="mailto:info@duplexnet.com">
-        Schedule a Consultation
-      </a>
-
-      <a class="btn btn-secondary" href="mailto:info@duplexnet.com">
-        Request a Network Assessment
-      </a>
+      <a class="btn btn-primary" href="mailto:info@duplexnet.com?subject=Schedule%20a%20Consultation">Schedule a Consultation</a>
+      <a class="btn btn-secondary" href="mailto:info@duplexnet.com?subject=Request%20a%20Network%20Assessment">Request a Network Assessment</a>
     </div>
-
   </div>
 </section>
+
+<section id="about" class="section-dark">
+  <div class="container">
+    <div class="section-title">
+      <h2>About DuplexIT</h2>
+    </div>
+    <div class="about-box">
+      DuplexIT provides professional network engineering and infrastructure consulting for businesses that need reliable,
+      secure, and scalable connectivity. We specialize in enterprise networking, Fortinet SD-WAN, Cisco routing and switching,
+      firewall security, Cisco ISE network access control, and AWS cloud networking. Our AWS networking services include
+      Direct Connect, site-to-site VPN, Transit Gateway, VPC architecture, Internet Gateway, NAT Gateway, route tables,
+      hybrid connectivity, and secure cloud integration.
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Core Services</h2>
+      <p>Hands-on engineering services for designing, deploying, securing, and improving your network infrastructure.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>SD-WAN Design & Deployment</h3>
+        <p>FortiGate SD-WAN architecture, IPsec overlays, BGP routing, dual-ISP failover, HA design, and branch connectivity.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔀</div>
+        <h3>Routing & Switching</h3>
+        <p>Cisco LAN/WAN design using Catalyst, Nexus, VLANs, OSPF, BGP, HSRP, EtherChannel, STP, and campus architecture.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔐</div>
+        <h3>Network Access Control</h3>
+        <p>Cisco ISE design, 802.1X, MAB, endpoint profiling, VLAN assignment, segmentation, and policy-based access.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">☁️</div>
+        <h3>Cloud Network Integration</h3>
+        <p>AWS Direct Connect, Transit Gateway, VPC routing, VPN backup, hybrid cloud connectivity, and secure cloud access.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔥</div>
+        <h3>Firewall & VPN Engineering</h3>
+        <p>Firewall policy design, VPN configuration, ACL cleanup, segmentation, remote access, and secure connectivity.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>Assessment & Documentation</h3>
+        <p>Network reviews, architecture diagrams, configuration assessment, migration planning, and implementation documentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="solutions" class="section-dark">
+  <div class="container">
+    <div class="section-title">
+      <h2>Business Solutions</h2>
+      <p>Outcome-focused solutions that help businesses improve uptime, security, cloud access, and network scalability.</p>
+    </div>
+
+    <div class="solution-grid">
+      <div class="card solution-card">
+        <div class="icon">⚡</div>
+        <h3>Branch Connectivity Modernization</h3>
+        <p>Improve site-to-site connectivity with resilient SD-WAN, dual ISP paths, secure tunnels, and better traffic control.</p>
+        <span class="outcome">Outcome: stronger uptime</span>
+      </div>
+
+      <div class="card solution-card">
+        <div class="icon">☁️</div>
+        <h3>Secure Cloud Connectivity</h3>
+        <p>Connect offices, data centers, and AWS environments using secure hybrid routing, VPN backup, and cloud segmentation.</p>
+        <span class="outcome">Outcome: safer cloud access</span>
+      </div>
+
+      <div class="card solution-card">
+        <div class="icon">🧱</div>
+        <h3>Network Segmentation & Access Control</h3>
+        <p>Reduce risk by controlling user, device, guest, and IoT access with Cisco ISE, NAC policies, and VLAN segmentation.</p>
+        <span class="outcome">Outcome: reduced security risk</span>
+      </div>
+
+      <div class="card solution-card">
+        <div class="icon">🚀</div>
+        <h3>Network Readiness for Growth</h3>
+        <p>Prepare your infrastructure for new offices, cloud services, security tools, and future business expansion.</p>
+        <span class="outcome">Outcome: scalable infrastructure</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="container">
+    <div class="section-title">
+      <h2>Expertise & Why Choose DuplexIT</h2>
+      <p>Practical delivery for business-critical network environments.</p>
+    </div>
+
+    <div class="two-column">
+      <div class="info-box">
+        <h3>Technical Expertise</h3>
+        <div class="list">
+          <div class="list-item">Cisco Enterprise Networking</div>
+          <div class="list-item">Cisco Identity Services Engine</div>
+          <div class="list-item">Fortinet SD-WAN Architecture</div>
+          <div class="list-item">AWS Cloud Networking</div>
+          <div class="list-item">Firewall and VPN Security</div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h3>Why Choose DuplexIT</h3>
+        <div class="list">
+          <div class="list-item">Enterprise-level network engineering experience</div>
+          <div class="list-item">Fortinet SD-WAN and Cisco infrastructure expertise</div>
+          <div class="list-item">Security-focused architecture and implementation</div>
+          <div class="list-item">Remote and on-site consulting support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="container">
+    <h2>Ready to improve your network?</h2>
+    <p>
+      Whether you need SD-WAN design, AWS cloud connectivity, firewall security, Cisco ISE deployment,
+      or enterprise network support, DuplexIT can help you build a reliable and secure infrastructure.
+    </p>
+    <a class="btn btn-primary" href="mailto:info@duplexnet.com?subject=Request%20a%20Network%20Assessment">Request a Network Assessment</a>
+  </div>
+</section>
+
+<footer>
+  <h2>DuplexIT</h2>
+  <div class="footer-slogan">Your Network. Our Expertise.</div>
+  <div class="footer-line">Enterprise Networking | SD-WAN | Cloud Networking | Network Security</div>
+  <div class="footer-line">Remote & On-Site Consulting Available</div>
+  <div class="footer-line">Email: <a href="mailto:info@duplexnet.com">info@duplexnet.com</a></div>
+  <br />
+  <div>© 2026 DuplexIT. All rights reserved.</div>
+</footer>
 
 </body>
 </html>
